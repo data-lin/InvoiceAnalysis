@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <display-name></display-name>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>inputservlet</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.inputservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>outputservlet</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.outputservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addinputservlet</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.addinputservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>addoutputservlet</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.addoutputservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>monthinput</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.monthinput</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>monthoutput</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.monthoutput</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>InputListServlet</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.InputListServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+    <servlet-name>OutputListServlet</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.OutputListServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yearinput</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.yearinput</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>yearoutput</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.yearoutput</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>contrastmonth</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.contrastmonth</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>contrastyear</servlet-name>
+    <servlet-class>cn.edu.gdpu.servlet.contrastyear</servlet-class>
+  </servlet>
+
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>inputservlet</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/inputservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>outputservlet</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/outputservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addinputservlet</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/addinputservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>addoutputservlet</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/addoutputservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>monthinput</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/monthinput</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>monthoutput</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/monthoutput</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>InputListServlet</servlet-name>
+    <url-pattern>/servlet/InputListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>OutputListServlet</servlet-name>
+    <url-pattern>/servlet/OutputListServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yearinput</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/yearinput</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>yearoutput</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/yearoutput</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>contrastmonth</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/contrastmonth</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>contrastyear</servlet-name>
+    <url-pattern>/cn.edu.gdpu.servlet/contrastyear</url-pattern>
+  </servlet-mapping>
+	  
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

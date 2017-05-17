@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="InvoiceAnalysis"
+  id="myeclipse.1489811248182"
+  context-root="/InvoiceAnalysis"
+  j2ee-spec="6.0"
+  archive="InvoiceAnalysis.war">
+  <attributes>
+    <attribute name="webrootdir" value="WebRoot" />
+  </attributes>
+</project-module>
+

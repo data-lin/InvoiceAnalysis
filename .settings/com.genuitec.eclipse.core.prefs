@@ -1,0 +1,4 @@
+#Sun Mar 19 11:28:38 CST 2017
+eclipse.preferences.version=1
+validator.Checked=WebRoot/js/jquery.min.js,WebRoot/js/bootstrap.min.js,WebRoot/js/echarts.js,WebRoot/js/nprogress.js,WebRoot/js/custom.min.js,WebRoot/index.jsp
+validator.Unchecked=

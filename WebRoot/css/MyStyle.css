@@ -1,0 +1,45 @@
+@CHARSET "UTF-8";
+
+.pageNav {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.pageNumber {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+}
+
+.form-control-text {
+	text-align: center;
+	margin-left:5%;
+	margin-right:5%;
+}
+
+.search-table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 0;
+}
+
+.search-table td {
+	width:16.67%;
+	text-align: center;
+}
+
+.search-label {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.search-button {
+	display: block;
+}
+
+.alert-text {
+	border-color: #000;
+	border-width: 2px;
+}
