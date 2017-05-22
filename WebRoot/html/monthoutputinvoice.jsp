@@ -79,8 +79,8 @@
 								<li><a><i class="fa fa-home"></i> 进销项数据对比 <span
 										class="fa fa-chevron-down"></span> </a>
 									<ul class="nav child_menu">
-										<li><a href="cn.edu.gdpu.servlet/contrastmonth">月度统计</a>
-										</li>
+<!-- 										<li><a href="cn.edu.gdpu.servlet/contrastmonth">月度统计</a>
+										</li> -->
 										<li><a href="cn.edu.gdpu.servlet/contrastyear">年度统计</a>
 										</li>
 									</ul>
@@ -88,14 +88,14 @@
 								<li><a><i class="fa fa-edit"></i> 进项发票统计 <span
 										class="fa fa-chevron-down"></span> </a>
 									<ul class="nav child_menu">
-										<li><a href="cn.edu.gdpu.servlet/monthinput">月度统计</a></li>
+										<li><a href="cn.edu.gdpu.servlet/monthinput?ym=12-01">月度统计</a></li>
 										<li><a href="cn.edu.gdpu.servlet/yearinput">年度统计</a></li>
 									</ul>
 								</li>
 								<li><a><i class="fa fa-desktop"></i> 销项发票统计 <span
 										class="fa fa-chevron-down"></span> </a>
 									<ul class="nav child_menu">
-										<li><a href="cn.edu.gdpu.servlet/monthoutput">月度统计</a></li>
+										<li><a href="cn.edu.gdpu.servlet/monthoutput?ym=12-01">月度统计</a></li>
 										<li><a href="cn.edu.gdpu.servlet/yearoutput">年度统计</a></li>
 									</ul>
 								</li>
@@ -157,12 +157,38 @@
 
 			<!-- page content -->
 			<div class="right_col" role="main">
+			<%
+				Map<String, float[]> map = new HashMap<String, float[]>();
 
+				map = (Map)request.getAttribute("map");
+
+				String ym = (String)request.getAttribute("ym");
+				
+				//System.out.println("jsp"+ym);		
+                //System.out.println(Arrays.toString(map.get("12-01")));
+                //System.out.println(map.get(ym)[1]);	
+			%>
 				<!-- 插入一个搜索，按照输入的月份显示该月份的统计表格 -->
 				<div>
-					<form role="form">
-						<label>输入月份</label> <input type="date" name="select_date"
-							id="select_date" value="" />
+					<form action="cn.edu.gdpu.servlet/monthoutput" role="form" method="get">
+					
+
+						<label>请选择月份:</label> 
+					<select name="ym">
+					  <option value ="12-01">-请选择-</option>	
+					  <option value ="12-01">12-01</option>
+					  <option value ="12-02">12-02</option>
+					  <option value="12-03">12-03</option>
+					  <option value="12-04">12-04</option>
+					  <option value ="12-05">12-05</option>
+					  <option value ="12-06">12-06</option>
+					  <option value="12-07">12-07</option>
+					  <option value="12-08">12-08</option>
+					  <option value ="12-09">12-09</option>
+					  <option value ="12-10">12-10</option>
+					  <option value="12-11">12-11</option>
+					  <option value="12-12">12-12</option>
+					</select>
 						<button type="submit" class="btn btn-primary">提交</button>
 					</form>
 				</div>
@@ -171,7 +197,7 @@
 				<!--统计图  -->
 				<div class="row clearfix">
 					<div class="col-md-7 column">
-						<h3>xx月各类药物卖出情况-折线图</h3>
+						<h3><%=ym %>月各类药物卖出情况-折线图</h3>
 						<!--折线图-->
 						<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 						<div id="main2" style="width: 605px;height:440px"></div>
@@ -207,7 +233,13 @@
 								series : [ {
 									name : '当月卖出情况',
 									type : 'line',
-									data : [ 11000, 13400, 15700, 23100, 12800 ],
+									data : <%=Arrays.toString(map.get(ym)) %>,
+									label : {
+											normal : {
+												show : true,
+												position : 'outside'
+											}
+									},
 									markPoint : {
 										symbol : 'circle',
 										data : [ {
@@ -233,7 +265,7 @@
 
 					</div>
 					<div class="col-md-5 column">
-						<h3>xx月各类药物卖出情况-饼图</h3>
+						<h3><%=ym %>月各类药物卖出情况-饼图</h3>
 						<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
 						<div id="main3" style="width: 500px;height:440px"></div>
 
@@ -264,19 +296,19 @@
 									radius : '55%',
 									center : [ '50%', '60%' ],
 									data : [ {
-										value : 11000,
+										value : <%=map.get(ym)[0]%>,
 										name : '预防药物'
 									}, {
-										value : 13400,
+										value : <%=map.get(ym)[1]%>,
 										name : '诊断药物'
 									}, {
-										value : 15700,
+										value : <%=map.get(ym)[2]%>,
 										name : '治疗药物'
 									}, {
-										value : 23100,
+										value : <%=map.get(ym)[3]%>,
 										name : '药剂附加药物'
 									}, {
-										value : 12800,
+										value : <%=map.get(ym)[4]%>,
 										name : '其他药物'
 									},
 

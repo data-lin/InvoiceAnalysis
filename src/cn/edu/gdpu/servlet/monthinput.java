@@ -1,6 +1,7 @@
 package cn.edu.gdpu.servlet;
 
 import java.io.IOException;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,17 +24,17 @@ public class monthinput extends HttpServlet {
 		response.setCharacterEncoding("UTF-8");
 		
         monthinputdao md = new monthinputdao();
-        //JSONObject array = new JSONObject(); 
 		Map<String, float[]> map = new HashMap<String, float[]>();
 
         try {
-			//array = md.query();
         	map = md.monthquery();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
         	
-        //System.out.println(array);
+        String ym = request.getParameter("ym");
+                
+        request.setAttribute("ym", ym);
         request.setAttribute("map", map);
 		request.getRequestDispatcher("/html/monthinputinvoice.jsp").forward(request, response);			
 	}

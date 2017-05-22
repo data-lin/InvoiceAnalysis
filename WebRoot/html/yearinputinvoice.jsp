@@ -79,14 +79,14 @@
 								<li><a><i class="fa fa-home"></i> 进销项数据对比 <span
 										class="fa fa-chevron-down"></span> </a>
 									<ul class="nav child_menu">
-										<li><a href="cn.edu.gdpu.servlet/contrastmonth">月度统计</a>
-										</li>
+<!-- 										<li><a href="cn.edu.gdpu.servlet/contrastmonth">月度统计</a>
+										</li>   -->
 										<li><a href="cn.edu.gdpu.servlet/contrastyear">年度统计</a></li>
 									</ul></li>
 								<li><a><i class="fa fa-edit"></i> 进项发票统计 <span
 										class="fa fa-chevron-down"></span> </a>
 									<ul class="nav child_menu">
-										<li><a href="cn.edu.gdpu.servlet/monthinput">月度统计</a>
+										<li><a href="cn.edu.gdpu.servlet/monthinput?ym=12-01">月度统计</a>
 										</li>
 										<li><a href="cn.edu.gdpu.servlet/yearinput">年度统计</a>
 										</li>
@@ -94,7 +94,7 @@
 								<li><a><i class="fa fa-desktop"></i> 销项发票统计 <span
 										class="fa fa-chevron-down"></span> </a>
 									<ul class="nav child_menu">
-										<li><a href="cn.edu.gdpu.servlet/monthoutput">月度统计</a>
+										<li><a href="cn.edu.gdpu.servlet/monthoutput?ym=12-01">月度统计</a>
 										</li>
 										<li><a href="cn.edu.gdpu.servlet/yearoutput">年度统计</a>
 										</li>

@@ -84,7 +84,7 @@ public class addoutputservlet extends HttpServlet {
 				e1.printStackTrace();
 			}
 			
-			response.sendRedirect("inputservlet?showPage=1");
+			response.sendRedirect("outputservlet?showPage=1");
 		}
 		
 		try {
